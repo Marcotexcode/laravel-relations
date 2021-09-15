@@ -16,7 +16,21 @@
            
             <div class="card-body">
            
-                <h5 class="card-title"> {{$post->slug}} </h5>
+                <h2 class="card-title"> {{$post->slug}} </h2>
+
+                <h3 class="card-title"> 
+                    
+                    @if ($post->category)
+                            
+                        Categoria: {{ $post->category->name }} 
+                        
+                    @else
+
+                        Categoria: Nessuna categoria
+                        
+                    @endif
+                
+                </h3>
            
                 <p class="card-text"> {{$post->content}} </p>
                       
